@@ -1,0 +1,16 @@
+name: Context Demo
+
+on: push
+
+jobs:
+  show-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print branch name
+        run: echo "Branch: ${{ github.ref_name }}"
+      
+      - name: Print actor
+        run: echo "Actor: ${{ github.actor }}"
+      
+      - name: Show runner OS
+        run: echo "Runner: ${{ runner.os }}"
